@@ -167,21 +167,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1536165476516</updated>
-      <workItem from="1536165479095" duration="280000" />
+      <workItem from="1536165479095" duration="500000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="280000" />
+    <option name="totallyTimeSpent" value="500000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="CMake" visible="true" weight="0.32959184" />
+      <window_info anchor="bottom" id="CMake" visible="true" weight="0.32959184" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" />
