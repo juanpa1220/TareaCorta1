@@ -1,6 +1,7 @@
 #include <iostream>
+#include "src/Application.cpp"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    auto *app = new Application();
+    return EXIT_SUCCESS;
 }
