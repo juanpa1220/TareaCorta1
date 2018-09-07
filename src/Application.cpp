@@ -26,6 +26,10 @@ private:
     sf::Texture vegTexture;
     sf::Sprite vegSprite;
     sf::Text vegText;
+
+    sf::Texture bandTexture;
+    sf::Sprite band1Sprite;
+    sf::Sprite band2Sprite;
 public:
     Application() {
         // main window
@@ -51,6 +55,12 @@ public:
                 "/Users/juanpablomartinezbrenes/Documents/ITCR/CE-2103/TareaCorta1/res/img/vegPizza.png");
         vegSprite.setTexture(vegTexture);
         vegSprite.setPosition(50, 1000);
+
+        bandTexture.loadFromFile("/Users/juanpablomartinezbrenes/Documents/ITCR/CE-2103/TareaCorta1/res/img/band.png");
+        band1Sprite.setTexture(bandTexture);
+        band1Sprite.setPosition(700, -1600);
+        band2Sprite.setTexture(bandTexture);
+        band2Sprite.setPosition(700, 0);
 
 
         // buttons over pizza images
@@ -121,6 +131,14 @@ public:
                 }
             }
             loopApp();
+            if (band1Sprite.getPosition().y >= 1600) {
+                band1Sprite.setPosition(700, -1600);
+            }if (band2Sprite.getPosition().y >= 1600){
+                band2Sprite.setPosition(700, -1600);
+            }
+            band1Sprite.move(sf::Vector2f(0, 20));
+            band2Sprite.move(sf::Vector2f(0, 20));
+            sf::sleep(sf::milliseconds(100));
         }
     }
 
@@ -139,6 +157,8 @@ public:
         window.draw(pepperoniText);
         window.draw(hawaiianText);
         window.draw(vegText);
+        window.draw(band1Sprite);
+        window.draw(band2Sprite);
 
         window.display();
     }

@@ -12,18 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc6a0a78-f621-48ba-a58f-107237e299c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/res/font/font.TTF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/hawaiianPizza.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/pepperoniPizza.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/vegPizza.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Application.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Application.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/img/band.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TareaCorta1.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TareaCorta1.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake_modules/FindSFML.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake_modules/FindSFML.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,11 +28,11 @@
     <session id="-1408444554">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -49,29 +40,30 @@
           <entry key="cmake" value="2" />
           <entry key="cpp" value="3" />
           <entry key="h" value="5" />
-          <entry key="png" value="2" />
+          <entry key="jpg" value="3" />
+          <entry key="png" value="4" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CMakeLists.txt" value="4" />
-          <entry key="Image" value="2" />
+          <entry key="Image" value="7" />
           <entry key="ObjectiveC" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="1843" />
+          <entry key="cpp" value="2162" />
           <entry key="h" value="87" />
-          <entry key="txt" value="41" />
+          <entry key="txt" value="79" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="27" />
-          <entry key="ObjectiveC" value="1930" />
-          <entry key="PLAIN_TEXT" value="14" />
+          <entry key="ObjectiveC" value="2249" />
+          <entry key="PLAIN_TEXT" value="52" />
         </counts>
       </usages-collector>
     </session>
@@ -93,8 +85,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Application.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1583">
-              <caret line="135" column="36" lean-forward="true" selection-start-line="135" selection-start-column="36" selection-end-line="135" selection-end-column="36" />
+            <state relative-caret-position="450">
+              <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
               <folding>
                 <element signature="e#58#77#0" expanded="true" />
               </folding>
@@ -126,9 +118,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="16" />
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="177" />
+    <option name="y" value="75" />
     <option name="width" value="1680" />
     <option name="height" value="959" />
   </component>
@@ -144,6 +136,17 @@
             <path>
               <item name="TareaCorta1" type="b2602c69:ProjectViewProjectNode" />
               <item name="TareaCorta1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TareaCorta1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TareaCorta1" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TareaCorta1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TareaCorta1" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -208,7 +211,10 @@
       <updated>1536165476516</updated>
       <workItem from="1536165479095" duration="1049000" />
       <workItem from="1536166700041" duration="1664000" />
-      <workItem from="1536187942360" duration="15998000" />
+      <workItem from="1536187942360" duration="16129000" />
+      <workItem from="1536252785249" duration="185000" />
+      <workItem from="1536259156327" duration="1310000" />
+      <workItem from="1536261648791" duration="2205000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1536166238546</created>
@@ -217,21 +223,29 @@
       <option name="project" value="LOCAL" />
       <updated>1536166238546</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Main window w images and buttons">
+      <created>1536213852834</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1536213852834</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18711000" />
+    <option name="totallyTimeSpent" value="22542000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="16" y="23" width="1680" height="959" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25579977" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26495728" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.37139562" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.37040818" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -241,7 +255,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="CMake" order="11" weight="0.32959184" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32857144" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3255102" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -278,7 +292,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Main window w images and buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main window w images and buttons" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/cmake_modules/FindSFML.cmake">
@@ -288,12 +303,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test.h" />
+    <entry file="file://$PROJECT_DIR$/src/test.cpp" />
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -308,19 +319,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
-          <folding>
-            <element signature="e#58#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/img/background.png">
+    <entry file="file://$PROJECT_DIR$/Application.cpp" />
+    <entry file="file://$PROJECT_DIR$/res/img/background.png" />
+    <entry file="file://$PROJECT_DIR$/res/img/pepperoniPizza.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/img/band.jpg" />
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -331,13 +335,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/img/pepperoniPizza.png">
+    <entry file="file://$PROJECT_DIR$/res/img/band.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/img/background.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/img/band copy.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Application.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1583">
-          <caret line="135" column="36" lean-forward="true" selection-start-line="135" selection-start-column="36" selection-end-line="135" selection-end-column="36" />
+        <state relative-caret-position="450">
+          <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
           <folding>
             <element signature="e#58#77#0" expanded="true" />
           </folding>
