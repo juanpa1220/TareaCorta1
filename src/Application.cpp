@@ -498,7 +498,7 @@ public:
     }
     /*
      * Limpia la pantalla
-     * Pinta los Sprites
+     * Pinta cada uno de los Sprites
      * Muestra la pantalla
      */
     void draw() {
