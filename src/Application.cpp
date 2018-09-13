@@ -241,7 +241,7 @@ public:
 
                     int j=0;
                     while(j<i){
-                        prueba[j].sprite.setPosition(650,prueba[0].sprite.getPosition().y);
+                        prueba[j].sprite.setPosition(650,prueba[j].sprite.getPosition().y);
                         prueba[j].sprite.move(sf::Vector2f(0,10));
                         j++;
 
@@ -255,7 +255,7 @@ public:
                         prueba[0]=hawaiianPizza.PrepareTheDough();
                         prueba[0].sprite.setTexture(hawaiianTexture2);
                     }else{
-                        for(int k=0; k<i;k++){
+                        for(int k=0; k<=i;k++){
                             prueba[k]=prueba[k+1];
                         }
                         prueba[i-1]=hawaiianPizza.PrepareTheDough();
