@@ -14,8 +14,9 @@ private:
     sf::RenderWindow window;
 
 
-    Process *prueba = new Process[2];
+    Process *process = new Process[3];
 
+    //Tipos de pizza
     HawaiianPizza hawaiianPizza;
     PepperoniPizza pepperoniPizza;
     VegPizza vegPizza;
@@ -30,10 +31,6 @@ private:
     sf::Sprite pepperoniSprite;
     sf::Text pepperoniText;
 
-
-
-
-
     sf::Texture hawaiianTexture;
     sf::Sprite hawaiianSprite;
     sf::Text hawaiianText;
@@ -42,10 +39,11 @@ private:
     sf::Sprite vegSprite;
     sf::Text vegText;
 
+    //Textura y Sprites de las bandas
     sf::Texture bandTexture;
     sf::Sprite band1Sprite;
     sf::Sprite band2Sprite;
-    int Y=0;
+
 
     //Textura de los procesos
     sf::Texture hawaiianTexture1;
@@ -188,8 +186,8 @@ public:
                         if (pepperoniButton.getGlobalBounds().contains(
                                 window.mapPixelToCoords(sf::Vector2i(event.mouseButton.x, event.mouseButton.y)))) {
                                 if(i<=1){
-                                    prueba[i]=pepperoniPizza.CutIngredients();
-                                    prueba[i].sprite.setTexture(pepperoniTexture1);
+                                    process[i]=pepperoniPizza.CutIngredients();
+                                    process[i].sprite.setTexture(pepperoniTexture1);
 
                                     i+=1;
                                 }
@@ -201,8 +199,8 @@ public:
                                 window.mapPixelToCoords(sf::Vector2i(event.mouseButton.x, event.mouseButton.y)))) {
 
                                 if(i<=1){
-                                    prueba[i]=hawaiianPizza.CutIngredients();
-                                    prueba[i].sprite.setTexture(hawaiianTexture1);
+                                    process[i]=hawaiianPizza.CutIngredients();
+                                    process[i].sprite.setTexture(hawaiianTexture1);
 
                                     i+=1;
                                 }
@@ -212,8 +210,8 @@ public:
                                 window.mapPixelToCoords(sf::Vector2i(event.mouseButton.x, event.mouseButton.y)))) {
 
                                 if(i<=1){
-                                    prueba[i]=vegPizza.CutIngredients();
-                                    prueba[i].sprite.setTexture(vegetarianTexture1);
+                                    process[i]=vegPizza.CutIngredients();
+                                    process[i].sprite.setTexture(vegetarianTexture1);
 
                                     i+=1;
                                 }
@@ -241,227 +239,231 @@ public:
 
                     int j=0;
                     while(j<i){
-                        prueba[j].sprite.setPosition(650,prueba[j].sprite.getPosition().y);
-                        prueba[j].sprite.move(sf::Vector2f(0,10));
+                        process[j].sprite.setPosition(650,process[j].sprite.getPosition().y);
+                        process[j].sprite.move(sf::Vector2f(0,10));
                         j++;
 
                     }
                 }
-            if(prueba[0].sprite.getPosition().y==1500 && prueba[0].nameProcess=="Cut Ingredients"){
+            if(process[0].sprite.getPosition().y==1500 && process[0].nameProcess=="Cut Ingredients"){
 
-                if(prueba[0].namePizza=="Hawaiian"){
+                if(process[0].namePizza=="Hawaiian"){
 
                     if(i==1){
-                        prueba[0]=hawaiianPizza.PrepareTheDough();
-                        prueba[0].sprite.setTexture(hawaiianTexture2);
-                    }else{
-                        for(int k=0; k<=i;k++){
-                            prueba[k]=prueba[k+1];
-                        }
-                        prueba[i-1]=hawaiianPizza.PrepareTheDough();
-                        prueba[i-1].sprite.setTexture(hawaiianTexture2);
-                    }
-
-                }else if(prueba[0].namePizza=="Vegetarian"){
-                    if(i==1){
-                        prueba[0]=vegPizza.PrepareTheDough();
-                        prueba[0].sprite.setTexture(vegetarianTexture2);
+                        process[0]=hawaiianPizza.PrepareTheDough();
+                        process[0].sprite.setTexture(hawaiianTexture2);
                     }else{
                         for(int k=0; k<i;k++){
-                            prueba[k]=prueba[k+1];
+                            process[k]=process[k+1];
                         }
-                        prueba[i-1]=vegPizza.PrepareTheDough();
-                        prueba[i-1].sprite.setTexture(vegetarianTexture2);
+                        process[i-1]=hawaiianPizza.PrepareTheDough();
+                        process[i-1].sprite.setTexture(hawaiianTexture2);
+                    }
+
+                }else if(process[0].namePizza=="Vegetarian"){
+                    if(i==1){
+                        process[0]=vegPizza.PrepareTheDough();
+                        process[0].sprite.setTexture(vegetarianTexture2);
+                    }else{
+                        for(int k=0; k<i;k++){
+                            process[k]=process[k+1];
+                        }
+                        process[i-1]=vegPizza.PrepareTheDough();
+                        process[i-1].sprite.setTexture(vegetarianTexture2);
                     }
 
 
 
-                }else if(prueba[0].namePizza=="Pepperoni"){
+                }else if(process[0].namePizza=="Pepperoni"){
 
                     if(i==1){
-                        prueba[0]=pepperoniPizza.PrepareTheDough();
-                        prueba[0].sprite.setTexture(pepperoniTexture2);
+                        process[0]=pepperoniPizza.PrepareTheDough();
+                        process[0].sprite.setTexture(pepperoniTexture2);
                     }else{
-                        for(int k=0; k<i;k++){
-                            prueba[k]=prueba[k+1];
-                        }
-                        prueba[i-1]=pepperoniPizza.PrepareTheDough();
-                        prueba[i-1].sprite.setTexture(pepperoniTexture2);
-                    }
 
-                }
-
-            }else if(prueba[0].sprite.getPosition().y==1500 && prueba[0].nameProcess=="Prepare The Dough"){
-                if(prueba[0].namePizza=="Hawaiian"){
-
-                    if(i==1){
-                        prueba[0]=hawaiianPizza.TomatoSauce();
-                        prueba[0].sprite.setTexture(hawaiianTexture3);
-                    }else{
                         for(int k=0; k<i;k++){
-                            prueba[k]=prueba[k+1];
-                        }
-                        prueba[i-1]=hawaiianPizza.TomatoSauce();
-                        prueba[i-1].sprite.setTexture(hawaiianTexture3);
-                    }
 
-                }else if(prueba[0].namePizza=="Vegetarian"){
-                    if(i==1){
-                        prueba[0]=vegPizza.TomatoSauce();
-                        prueba[0].sprite.setTexture(vegetarianTexture3);
-                    }else{
-                        for(int k=0; k<i;k++){
-                            prueba[k]=prueba[k+1];
+                            process[k]=process[k+1];
                         }
-                        prueba[i-1]=vegPizza.TomatoSauce();
-                        prueba[i-1].sprite.setTexture(vegetarianTexture3);
-                    }
-                }else if(prueba[0].namePizza=="Pepperoni"){
-                    if(i==1){
-                        prueba[0]=pepperoniPizza.TomatoSauce();
-                        prueba[0].sprite.setTexture(pepperoniTexture3);
-                    }else{
-                        for(int k=0; k<i;k++){
-                            prueba[k]=prueba[k+1];
-                        }
-                        prueba[i-1]=pepperoniPizza.TomatoSauce();
-                        prueba[i-1].sprite.setTexture(pepperoniTexture3);
+
+                        process[i-1]=pepperoniPizza.PrepareTheDough();
+                        process[i-1].sprite.setTexture(pepperoniTexture2);
                     }
 
                 }
 
-            }else if(prueba[0].sprite.getPosition().y==1500 && prueba[0].nameProcess=="Tomato Sauce"){
-                if(prueba[0].namePizza=="Hawaiian"){
+            }else if(process[0].sprite.getPosition().y==1500 && process[0].nameProcess=="Prepare The Dough"){
+                if(process[0].namePizza=="Hawaiian"){
 
                     if(i==1){
-                        prueba[0]=hawaiianPizza.PlaceCheese();
-                        prueba[0].sprite.setTexture(hawaiianTexture4);
+                        process[0]=hawaiianPizza.TomatoSauce();
+                        process[0].sprite.setTexture(hawaiianTexture3);
                     }else{
                         for(int k=0; k<i;k++){
-                            prueba[k]=prueba[k+1];
+                            process[k]=process[k+1];
                         }
-                        prueba[i-1]=hawaiianPizza.PlaceCheese();
-                        prueba[i-1].sprite.setTexture(hawaiianTexture4);
+                        process[i-1]=hawaiianPizza.TomatoSauce();
+                        process[i-1].sprite.setTexture(hawaiianTexture3);
                     }
 
-                }else if(prueba[0].namePizza=="Vegetarian"){
+                }else if(process[0].namePizza=="Vegetarian"){
                     if(i==1){
-                        prueba[0]=vegPizza.PlaceChesse();
-                        prueba[0].sprite.setTexture(vegetarianTexture4);
+                        process[0]=vegPizza.TomatoSauce();
+                        process[0].sprite.setTexture(vegetarianTexture3);
                     }else{
                         for(int k=0; k<i;k++){
-                            prueba[k]=prueba[k+1];
+                            process[k]=process[k+1];
                         }
-                        prueba[i-1]=vegPizza.PlaceChesse();
-                        prueba[i-1].sprite.setTexture(vegetarianTexture4);
-                    }Y=0;
-                }else if(prueba[0].namePizza=="Pepperoni"){
+                        process[i-1]=vegPizza.TomatoSauce();
+                        process[i-1].sprite.setTexture(vegetarianTexture3);
+                    }
+                }else if(process[0].namePizza=="Pepperoni"){
                     if(i==1){
-                        prueba[0]=pepperoniPizza.PlaceChesse();
-                        prueba[0].sprite.setTexture(pepperoniTexture4);
+                        process[0]=pepperoniPizza.TomatoSauce();
+                        process[0].sprite.setTexture(pepperoniTexture3);
                     }else{
                         for(int k=0; k<i;k++){
-                            prueba[k]=prueba[k+1];
+                            process[k]=process[k+1];
                         }
-                        prueba[i-1]=pepperoniPizza.PlaceChesse();
-                        prueba[i-1].sprite.setTexture(pepperoniTexture4);
+                        process[i-1]=pepperoniPizza.TomatoSauce();
+                        process[i-1].sprite.setTexture(pepperoniTexture3);
                     }
 
                 }
 
-            }else if(prueba[0].sprite.getPosition().y==1500 && prueba[0].nameProcess=="Place Cheese"){
-
-                if(prueba[0].namePizza=="Hawaiian"){
+            }else if(process[0].sprite.getPosition().y==1500 && process[0].nameProcess=="Tomato Sauce"){
+                if(process[0].namePizza=="Hawaiian"){
 
                     if(i==1){
-                        prueba[0]=hawaiianPizza.Cook();
-                        prueba[0].sprite.setTexture(hawaiianTexture5);
+                        process[0]=hawaiianPizza.PlaceCheese();
+                        process[0].sprite.setTexture(hawaiianTexture4);
                     }else{
                         for(int k=0; k<i;k++){
-                            prueba[k]=prueba[k+1];
+                            process[k]=process[k+1];
                         }
-                        prueba[i-1]=hawaiianPizza.Cook();
-                        prueba[i-1].sprite.setTexture(hawaiianTexture5);
+                        process[i-1]=hawaiianPizza.PlaceCheese();
+                        process[i-1].sprite.setTexture(hawaiianTexture4);
+                    }
+
+                }else if(process[0].namePizza=="Vegetarian"){
+                    if(i==1){
+                        process[0]=vegPizza.PlaceChesse();
+                        process[0].sprite.setTexture(vegetarianTexture4);
+                    }else{
+                        for(int k=0; k<i;k++){
+                            process[k]=process[k+1];
+                        }
+                        process[i-1]=vegPizza.PlaceChesse();
+                        process[i-1].sprite.setTexture(vegetarianTexture4);
+                    }
+                }else if(process[0].namePizza=="Pepperoni"){
+                    if(i==1){
+                        process[0]=pepperoniPizza.PlaceChesse();
+                        process[0].sprite.setTexture(pepperoniTexture4);
+                    }else{
+                        for(int k=0; k<i;k++){
+                            process[k]=process[k+1];
+                        }
+                        process[i-1]=pepperoniPizza.PlaceChesse();
+                        process[i-1].sprite.setTexture(pepperoniTexture4);
+                    }
+
+                }
+
+            }else if(process[0].sprite.getPosition().y==1500 && process[0].nameProcess=="Place Cheese"){
+
+                if(process[0].namePizza=="Hawaiian"){
+
+                    if(i==1){
+                        process[0]=hawaiianPizza.Cook();
+                        process[0].sprite.setTexture(hawaiianTexture5);
+                    }else{
+                        for(int k=0; k<i;k++){
+                            process[k]=process[k+1];
+                        }
+                        process[i-1]=hawaiianPizza.Cook();
+                        process[i-1].sprite.setTexture(hawaiianTexture5);
                     }
 
 
-                }else if(prueba[0].namePizza=="Vegetarian"){
+                }else if(process[0].namePizza=="Vegetarian"){
                     if(i==1){
-                        prueba[0]=vegPizza.PlaceVeg();
-                        prueba[0].sprite.setTexture(vegetarianTexture5);
+                        process[0]=vegPizza.PlaceVeg();
+                        process[0].sprite.setTexture(vegetarianTexture5);
                     }else{
                         for(int k=0; k<i;k++){
-                            prueba[k]=prueba[k+1];
+                            process[k]=process[k+1];
                         }
-                        prueba[i-1]=vegPizza.PlaceVeg();
-                        prueba[i-1].sprite.setTexture(vegetarianTexture5);
+                        process[i-1]=vegPizza.PlaceVeg();
+                        process[i-1].sprite.setTexture(vegetarianTexture5);
                     }
-                }else if(prueba[0].namePizza=="Pepperoni"){
+                }else if(process[0].namePizza=="Pepperoni"){
                     if(i==1){
-                        prueba[0]=pepperoniPizza.PlacePepperoni();
-                        prueba[0].sprite.setTexture(pepperoniTexture5);
+                        process[0]=pepperoniPizza.PlacePepperoni();
+                        process[0].sprite.setTexture(pepperoniTexture5);
                     }else{
                         for(int k=0; k<i;k++){
-                            prueba[k]=prueba[k+1];
+                            process[k]=process[k+1];
                         }
-                        prueba[i-1]=pepperoniPizza.PlacePepperoni();
-                        prueba[i-1].sprite.setTexture(pepperoniTexture5);
+                        process[i-1]=pepperoniPizza.PlacePepperoni();
+                        process[i-1].sprite.setTexture(pepperoniTexture5);
                     }
                 }
 
-            }else if(prueba[0].sprite.getPosition().y==1500 && (prueba[0].nameProcess=="Cook Pizza" && prueba[0].namePizza!="Pepperoni")){
-                    if(prueba[0].namePizza=="Hawaiian"){
+            }else if(process[0].sprite.getPosition().y==1500 && (process[0].nameProcess=="Cook Pizza" && process[0].namePizza!="Pepperoni")){
+                    if(process[0].namePizza=="Hawaiian"){
 
                         if(i==1){
-                            prueba[0]=hawaiianPizza.PlacePineapple();
-                            prueba[0].sprite.setTexture(hawaiianTexture6);
+                            process[0]=hawaiianPizza.PlacePineapple();
+                            process[0].sprite.setTexture(hawaiianTexture6);
                         }else{
                             for(int k=0; k<i;k++){
-                                prueba[k]=prueba[k+1];
+                                process[k]=process[k+1];
                             }
-                            prueba[i-1]=hawaiianPizza.Cook();
-                            prueba[i-1].sprite.setTexture(hawaiianTexture6);
+                            process[i-1]=hawaiianPizza.Cook();
+                            process[i-1].sprite.setTexture(hawaiianTexture6);
                         }
 
                     }
-            }else if(prueba[0].sprite.getPosition().y==1500 && prueba[0].nameProcess=="Place Pepperoni"){
+            }else if(process[0].sprite.getPosition().y==1500 && process[0].nameProcess=="Place Pepperoni"){
 
-                    if(prueba[0].namePizza=="Pepperoni"){
+                    if(process[0].namePizza=="Pepperoni"){
                         if(i==1){
-                            prueba[0]=pepperoniPizza.cook();
-                            prueba[0].sprite.setTexture(pepperoniTexture6);
+                            process[0]=pepperoniPizza.cook();
+                            process[0].sprite.setTexture(pepperoniTexture6);
                         }else{
                             for(int k=0; k<i;k++){
-                                prueba[k]=prueba[k+1];
+                                process[k]=process[k+1];
                             }
-                            prueba[i-1]=pepperoniPizza.cook();
-                            prueba[i-1].sprite.setTexture(pepperoniTexture6);
+                            process[i-1]=pepperoniPizza.cook();
+                            process[i-1].sprite.setTexture(pepperoniTexture6);
                         }
 
 
                     }
-            }else if(prueba[0].sprite.getPosition().y==1500 && prueba[0].nameProcess=="Special Ingredients"){
-                    if(prueba[0].namePizza=="Vegetarian"){
+            }else if(process[0].sprite.getPosition().y==1500 && process[0].nameProcess=="Special Ingredients"){
+                    if(process[0].namePizza=="Vegetarian"){
                         if(i==1){
-                            prueba[0]=vegPizza.cook();
-                            prueba[0].sprite.setTexture(vegetarianTexture6);
+                            process[0]=vegPizza.cook();
+                            process[0].sprite.setTexture(vegetarianTexture6);
                         }else{
                             for(int k=0; k<i;k++){
-                                prueba[k]=prueba[k+1];
+                                process[k]=process[k+1];
                             }
-                            prueba[i-1]=vegPizza.cook();
-                            prueba[i-1].sprite.setTexture(vegetarianTexture6);
+                            process[i-1]=vegPizza.cook();
+                            process[i-1].sprite.setTexture(vegetarianTexture6);
                         }
                     }
-            }else if(prueba[0].sprite.getPosition().y==1500){
+            }else if(process[0].sprite.getPosition().y==1500){
 
                     if(i==1){
-                        prueba[0]=prueba[1];
+                        process[0]=process[1];
+                        i=0;
                     }else{
                         for(int k=0; k<i;k++){
-                            prueba[k]=prueba[k+1];
-                        }
-                    }i=0;
+                            process[k]=process[k+1];
+                        }i=-1;
+                    };
 
             }
 
@@ -492,7 +494,7 @@ public:
         if (i>=1){
             while(j<i){
 
-                window.draw(prueba[j].sprite);
+                window.draw(process[j].sprite);
                 j++;
             }
 
