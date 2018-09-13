@@ -1,5 +1,5 @@
 //
-// Created by Juan Pablo Martínez Brenes on 9/5/18.
+// Created by Juan Pablo Martínez Brenes, Martin Calderón Blanco, Olman Castro Hernández on 9/5/18
 //
 #include "iostream"
 #include "Application.h"
@@ -21,20 +21,25 @@ private:
     PepperoniPizza pepperoniPizza;
     VegPizza vegPizza;
 
+    //Textura y Spride del Fondo
     sf::Texture backgroundTexture;
     sf::Sprite backgroundSprite;
 
+    //Fuente
     sf::Font headFont;
     sf::Text headText;
 
+    //Textura y Sprite de la Pizza Pepperoni
     sf::Texture pepperoniTexture;
     sf::Sprite pepperoniSprite;
     sf::Text pepperoniText;
 
+    //Textura y Sprite de la Pizza Hawaiiana
     sf::Texture hawaiianTexture;
     sf::Sprite hawaiianSprite;
     sf::Text hawaiianText;
 
+    //Textura Y Sprite de la Pizza Vegetariana
     sf::Texture vegTexture;
     sf::Sprite vegSprite;
     sf::Text vegText;
@@ -46,6 +51,7 @@ private:
 
 
     //Textura de los procesos
+    //Hawaiian
     sf::Texture hawaiianTexture1;
     sf::Texture hawaiianTexture2;
     sf::Texture hawaiianTexture3;
@@ -53,6 +59,8 @@ private:
     sf::Texture hawaiianTexture5;
     sf::Texture hawaiianTexture6;
 
+
+    //Vegetarian
     sf::Texture vegetarianTexture1;
     sf::Texture vegetarianTexture2;
     sf::Texture vegetarianTexture3;
@@ -60,16 +68,20 @@ private:
     sf::Texture vegetarianTexture5;
     sf::Texture vegetarianTexture6;
 
+
+    //Pepperoni
     sf::Texture pepperoniTexture1;
     sf::Texture pepperoniTexture2;
     sf::Texture pepperoniTexture3;
     sf::Texture pepperoniTexture4;
     sf::Texture pepperoniTexture5;
     sf::Texture pepperoniTexture6;
+
+
 public:
     Application() {
         // main window
-
+        //Carga de Texturas
         hawaiianTexture1.loadFromFile("/home/gaburolo/CLionProjects/TareaCorta1/res/img/Hawaiian/HawaiianCI.png");
         hawaiianTexture2.loadFromFile("/home/gaburolo/CLionProjects/TareaCorta1/res/img/Hawaiian/HawaiianPTD.png");
         hawaiianTexture3.loadFromFile("/home/gaburolo/CLionProjects/TareaCorta1/res/img/Hawaiian/HawaiianTS.png");
@@ -92,8 +104,10 @@ public:
         pepperoniTexture5.loadFromFile("/home/gaburolo/CLionProjects/TareaCorta1/res/img/Pepperoni/PepperonPP.png");
         pepperoniTexture6.loadFromFile("/home/gaburolo/CLionProjects/TareaCorta1/res/img/Pepperoni/PepperonC.png");
 
+        //Creacion de la ventana
         window.create(sf::VideoMode(1200, 1600), "PIZZA FACTORY");
 
+        //Carga de texturas para las pizzas, y se les da la posicion
         // background image
         backgroundTexture.loadFromFile(
                 "/home/gaburolo/CLionProjects/TareaCorta1/res/img/background.jpg");
@@ -104,10 +118,6 @@ public:
                 "/home/gaburolo/CLionProjects/TareaCorta1/res/img/pepperoniPizza.png");
         pepperoniSprite.setTexture(pepperoniTexture);
         pepperoniSprite.setPosition(50, 200);
-
-
-
-
 
         hawaiianTexture.loadFromFile(
                 "/home/gaburolo/CLionProjects/TareaCorta1/res/img/hawaiianPizza.png");
@@ -170,7 +180,7 @@ public:
 
 
 
-
+        //Ciclo del juego
         while (window.isOpen()) {
             sf::Event event{};
 
@@ -221,7 +231,11 @@ public:
 
                 }
             }
-            loopApp();
+
+
+
+
+            //Logica de la aplicacion
             if (band1Sprite.getPosition().y >= 1600) {
                 band1Sprite.setPosition(700, -1600);
             }if (band2Sprite.getPosition().y >= 1600){
@@ -245,6 +259,10 @@ public:
 
                     }
                 }
+
+
+
+            loopApp();
             if(process[0].sprite.getPosition().y==1500 && process[0].nameProcess=="Cut Ingredients"){
 
                 if(process[0].namePizza=="Hawaiian"){
@@ -472,11 +490,17 @@ public:
 
     }
 
-
+    /*
+     * Llama al metodo draw para pintar los sprites
+     */
     void loopApp() {
         draw();
     }
-
+    /*
+     * Limpia la pantalla
+     * Pinta los Sprites
+     * Muestra la pantalla
+     */
     void draw() {
 
         window.clear();
